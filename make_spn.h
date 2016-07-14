@@ -4,3 +4,4 @@
 void spn(int a,int b,int c,int d,int cipher[4]);
 
 #endif
+
