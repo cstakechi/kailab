@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "make_spn.h"
 
-#define T 8000
+#define T 8000 //4000
 void binary(int num,int array_binary[4]){ //二進数へ変換
 	int i;
 	for(i=0;i<4;i++){
