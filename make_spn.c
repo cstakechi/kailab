@@ -3,6 +3,7 @@
 #include"make_spn.h"
 
 #define lm 16
+//
 
 void make_binary(int num,int array_binary[4]){
 	int i;
