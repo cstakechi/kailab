@@ -3,20 +3,15 @@
 #include <stdlib.h>
 #include "make_spn.h"
 
-#define T 8000 //4000
-void binary(int num,int array_binary[4]){ //二進数へ変換
+#define T 8000
+void binary(int num,int array_binary[]){ //二進数へ変換
 	int i;
 	for(i=0;i<4;i++){
 			array_binary[3-i] = num % 2;
 			num = num / 2;
 		}
-		if(i!= 4){
-			for(;i<4;i++){
-				array_binary[3-i] = 0;
-			}
-		}
 }
-int decimal(int array_binary[4]){  //10進数へ変換
+int decimal(int array_binary[]){  //10進数へ変換
 	int i,temp=0;
 	for(i=0;i<4;i++)
 		temp += array_binary[i] * pow(2,3-i);

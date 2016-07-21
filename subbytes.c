@@ -5,7 +5,7 @@
 	int c[8] = {1,1,0,0,0,1,1,0};
 
 
-void fieldinv(int a[7]){
+void fieldinv(int a[]){
 
 	int temp,i;
 
@@ -17,14 +17,14 @@ void fieldinv(int a[7]){
 }
 
 
-int binarytofield(int a[7]){
+int binarytofield(int a[]){
 	int z=0,i;
 	for(i=0;i<8;i++)
 		z += a[i] * pow(2,i);
 	return z;
 }
 
-void fieldtobinary(int z,int a[7]){
+void fieldtobinary(int z,int a[]){
 	int i;
 		for(i=0;i<8;i++){
 				a[8-i] = z % 2;

@@ -3,19 +3,13 @@
 #include"make_spn.h"
 
 #define lm 16
-//
 
-void make_binary(int num,int array_binary[4]){
+void make_binary(int num,int array_binary[]){
 	int i;
 		for(i=0;i<4;i++){
 				array_binary[3-i] = num % 2;
 				num = num / 2;
 			}
-		if(i!= 4){
-			for(;i<4;i++){
-				array_binary[3-i] = 0;
-			}
-		}
 }
 
 int pi_s[lm] = {0xE, 0x4, 0xD, 0x1,
@@ -29,7 +23,7 @@ int pi_p[lm] = {  1,   5,   7,  13,
                  4,   8,  12,  16};
 
 
-void pip(int w1[4],int w2[4], int w3[4], int w4[4],int p,int temp[4]){
+void pip(int w1[],int w2[], int w3[], int w4[],int p,int temp[]){
 	p -= 1;
 	w1[p] = temp[0];
 	w2[p] = temp[1];
@@ -40,7 +34,7 @@ void pip(int w1[4],int w2[4], int w3[4], int w4[4],int p,int temp[4]){
 
 
 
-void spn(int a, int b, int c, int d, int cipher[4]){
+void spn(int a, int b, int c, int d, int cipher[]){
 
 	int k[32]={0,0,1,1,1,0,1,0,1,0,0,1,0,1,0,0,1,1,0,1,0,1,1,0,0,0,1,1,1,1,1,1};
 	int w1[4],w2[4],w3[4],w4[4];
