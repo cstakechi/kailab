@@ -5,14 +5,14 @@
 	int c[8] = {1,1,0,0,0,1,1,0};
 
 
-void fieldinv(int a[]){
+void fieldinv(int *a){
 
 	int temp,i;
 
 	for(i=0;i<4;i++){
-		temp = a[i];
-		a[i] = a[7-i];
-		a[7-i] = temp;
+		temp = *(a+i);
+		*(a+i) = *(a+7-i);
+		*(a+7-i) = temp;
 	}
 }
 
@@ -36,11 +36,13 @@ void fieldtobinary(int z,int a[]){
 
 int main(){
 
+	int *p;
 	int b[8];
 	int z;
 	int i,j;
 
-	z = binarytofield(a);
+	p = a;
+	z = binarytofield(p);
 	printf("%x\n",z);
 	if(z != 0)
 		fieldinv(a);
