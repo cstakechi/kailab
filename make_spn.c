@@ -108,4 +108,5 @@ void spn(int a, int b, int c, int d, int cipher[]){
 	cipher[2] = c;
 	cipher[3] = d;
 
+
 }
